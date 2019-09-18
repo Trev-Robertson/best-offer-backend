@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: one
+  contractor: one
+  price: 1
+  status: false
+
+two:
+  task: two
+  contractor: two
+  price: 1
+  status: false
