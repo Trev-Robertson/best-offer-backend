@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_09_18_155401) do
     t.bigint "contractor_id", null: false
     t.bigint "specialty_id", null: false
     t.index ["contractor_id", "specialty_id"], name: "index_contractors_specialties_on_contractor_id_and_specialty_id"
+    t.index ["specialty_id", "contractor_id"], name: "index_contractors_specialties_on_specialty_id_and_contractor_id"
   end
 
   create_table "reviews", force: :cascade do |t|
