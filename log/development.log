@@ -11343,3 +11343,165 @@ FOREIGN KEY ("user_id")
   ↳ db/seeds.rb:75
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:75
+Started GET "/" for ::1 at 2019-09-18 16:35:11 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (12.5ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-09-18 16:35:18 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 45ms (Views: 26.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-09-18 16:35:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/4" for ::1 at 2019-09-18 16:35:26 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews/4" for ::1 at 2019-09-18 16:35:34 -0400
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/reviews" for ::1 at 2019-09-18 16:35:40 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contractors" for ::1 at 2019-09-18 16:35:46 -0400
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.6ms)[0m  [1m[34mSELECT "contractors".* FROM "contractors"[0m
+  ↳ app/controllers/contractors_controller.rb:6
+Completed 200 OK in 33ms (Views: 12.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/contractors/2" for ::1 at 2019-09-18 16:35:50 -0400
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/contractors_controller.rb:10
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bids" for ::1 at 2019-09-18 16:35:58 -0400
+Processing by BidsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BidsController::Bids):
+  
+app/controllers/bids_controller.rb:5:in `index'
+Started GET "/bids" for ::1 at 2019-09-18 16:36:17 -0400
+Processing by BidsController#index as HTML
+  [1m[36mBid Load (0.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids"[0m
+  ↳ app/controllers/bids_controller.rb:6
+Completed 200 OK in 18ms (Views: 8.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/bids/3" for ::1 at 2019-09-18 16:36:22 -0400
+Processing by BidsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBid Load (0.4ms)[0m  [1m[34mSELECT  "bids".* FROM "bids" WHERE "bids"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:10
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/3" for ::1 at 2019-09-18 16:36:38 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:10:in `show'
+Started GET "/tasks/3" for ::1 at 2019-09-18 16:36:54 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-09-18 16:36:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tasks" for ::1 at 2019-09-18 16:37:01 -0400
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x00007ff0cda17758>
+Did you mean?  tasks):
+  
+app/controllers/tasks_controller.rb:6:in `index'
+Started GET "/tasks" for ::1 at 2019-09-18 16:37:41 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/tasks" for ::1 at 2019-09-18 16:37:48 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/3" for ::1 at 2019-09-18 16:37:51 -0400
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+

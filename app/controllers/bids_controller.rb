@@ -2,7 +2,7 @@ class BidsController < ApplicationController
 
 
     def index
-        bids = Bids.all
+        bids = Bid.all
         render json: bids
     end
 
