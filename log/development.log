@@ -32157,3 +32157,742 @@ Processing by UsersController#index as */*
 Completed 200 OK in 354ms (Views: 0.1ms | ActiveRecord: 247.5ms)
 
 
+Started GET "/users/Sam" for ::1 at 2019-09-20 14:02:25 -0400
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.4ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (2.6ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (1.1ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.8ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 186ms (Views: 0.1ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 14:06:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 14:06:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/specialties" for ::1 at 2019-09-20 14:07:19 -0400
+Processing by SpecialtiesController#index as HTML
+  [1m[36mSpecialty Load (8.4ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-09-20 14:07:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2019-09-20 14:09:21 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mSpecialty Load (6.7ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (7.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 5]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mContractor Load (1.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mSpecialty Load (0.4ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 9]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mTask Load (2.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 2]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 6]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Specialty Load (0.0ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (2.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mSpecialty Load (0.7ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.7ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Specialty Load (0.0ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 3]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Specialty Load (0.0ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 10]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Specialty Load (0.0ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Specialty Load (0.0ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 7]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 108ms (Views: 0.2ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 14:59:28 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.7ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (42.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 223ms (Views: 0.1ms | ActiveRecord: 107.8ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:04:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:04:38 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (6.8ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:05:28 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:05:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:05:53 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (33.9ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 36ms (Views: 1.5ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:06:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:06:38 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (0.4ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:06:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:06:52 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (8.4ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:27:25 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.4ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.5ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:28:09 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:28:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.5ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/luke" for ::1 at 2019-09-20 15:29:10 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"luke"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "luke"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/Luke" for ::1 at 2019-09-20 15:29:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Luke"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Luke"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 10]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mCACHE Contractor Load (0.0ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:30:45 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (9.1ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (2.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.7ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (1.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:30:46 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (3.9ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:31:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:31:50 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (0.5ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/Chine" for ::1 at 2019-09-20 15:32:24 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Chine"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Chine"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (1.6ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 7]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:32:24 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (1.4ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/Chine" for ::1 at 2019-09-20 15:32:42 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Chine"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Chine"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 7]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (1.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:32:42 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (1.7ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:37:19 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:37:19 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (0.9ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:39:34 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.3ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.2ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:39:34 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/Sam" for ::1 at 2019-09-20 15:40:20 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"Sam"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.4ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 4]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.4ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.5ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mSpecialty Load (0.3ms)[0m  [1m[34mSELECT  "specialties".* FROM "specialties" WHERE "specialties"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."task_id" = $1[0m  [["task_id", 8]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mContractor Load (0.2ms)[0m  [1m[34mSELECT  "contractors".* FROM "contractors" WHERE "contractors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/specialties/" for ::1 at 2019-09-20 15:40:20 -0400
+Processing by SpecialtiesController#index as */*
+  [1m[36mSpecialty Load (1.1ms)[0m  [1m[34mSELECT "specialties".* FROM "specialties"[0m
+  ↳ app/controllers/specialties_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
