@@ -1,3 +1,4 @@
+
 class TasksController < ApplicationController
 
 
@@ -12,10 +13,12 @@ class TasksController < ApplicationController
     end
 
     def create
-            user = User.find()
+   
+            user = User.find(tasks_params[:user_id])
+
         Task.create(tasks_params) 
 
-        render json: 
+        render json: user.user_serializer
 
     end
 
