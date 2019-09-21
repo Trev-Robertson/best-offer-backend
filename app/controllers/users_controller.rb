@@ -6,12 +6,12 @@ class UsersController < ApplicationController
         render json: User.all.all_users_serializer
     end
 
-    def show
+    # def show
         
-        user = User.find_by(name: params[:id])
+    #     user = User.find_by(name: params[:id])
        
-        render json: user.user_serializer
-    end
+    #     render json: user.user_serializer
+    # end
 
 
     private

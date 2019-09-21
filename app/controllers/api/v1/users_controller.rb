@@ -5,8 +5,9 @@ class Api::V1::UsersController < ApplicationController
 
 
     def show
-   
-       @user =  User.find_by({name: params[:name]})
+        token = request.headers["authentication"].split(" ")[1]
+        # byebug
+        @user = User.find(decode(token)['user_id'])
         render json: @user.user_serializer, status: :accepted
     end
 
