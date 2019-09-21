@@ -2,13 +2,15 @@ class User < ApplicationRecord
     has_many :tasks, dependent: :destroy
     has_many :reviews, dependent: :destroy
     has_many :contractors, through: :reviews
+    has_secure_password
+    validates :name, uniqueness: { case_sensitive: false }
 
 
 
 
         def self.all_users_serializer
             User.all.to_json( {
-                    :only => [:id, :name],
+                    :only => [:id, :name, ],
                     :include => {:tasks => 
                         {
                             :only => [:name, :description, :specialty_id], 

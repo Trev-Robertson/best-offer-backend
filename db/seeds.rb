@@ -11,11 +11,11 @@ Specialty.destroy_all
 Task.destroy_all
 Bid.destroy_all
 
-trevahr = User.create(name: "Trevahr")
-renee = User.create(name: "Renee")
-sam = User.create(name: "Sam")
-luke = User.create(name: "Luke")
-chine = User.create(name: "Chine")
+trevahr = User.create(name: "Trevahr", password: "123")
+renee = User.create(name: "Renee", password: "r")
+sam = User.create(name: "Sam", password: "s")
+luke = User.create(name: "Luke", password: "l")
+chine = User.create(name: "Chine", password: "c")
 
 
 
