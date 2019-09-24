@@ -6,7 +6,7 @@ class Api::V1::AuthController < ApplicationController
         @user = User.find_by({name: params[:name]})
         if @user && @user.authenticate(params[:password])
             token = encode({user_id: @user.id})
-            
+         
            render json: {authenticated: true, 
             user: @user.user_serializer,
             token: token

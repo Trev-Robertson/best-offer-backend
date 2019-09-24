@@ -45,7 +45,7 @@ class User < ApplicationRecord
                     :only => [:id, :name],
                     :include => {:tasks => 
                         {
-                            :only => [:name, :description, :specialty_id], 
+                            :only => [:id, :name, :description, :specialty_id], 
                                 :include => {:specialty => 
                                 {
                                 :only => [:name, :id]
