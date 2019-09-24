@@ -24,7 +24,11 @@ contractor2 = Contractor.create(name: "Contractor2")
 contractor3 = Contractor.create(name: "Contractor3")
 contractor4 = Contractor.create(name: "Contractor4")
 contractor5 = Contractor.create(name: "Contractor5")
-
+contractor6 = Contractor.create(name: "Contractor6")
+contractor7 = Contractor.create(name: "Contractor7")
+contractor8 = Contractor.create(name: "Contractor8")
+contractor9 = Contractor.create(name: "Contractor9")
+contractor10 = Contractor.create(name: "Contractor10")
 
 
 gardening = Specialty.create(name: "gardening")
@@ -43,6 +47,16 @@ contractor4.specialties << plumbing
 contractor4.specialties << carpentry
 contractor5.specialties << electrician
 contractor5.specialties << plumbing
+contractor6.specialties << gardening
+contractor7.specialties << plumbing
+contractor8.specialties << technology
+contractor9.specialties << electrician
+contractor10.specialties << carpentry
+contractor6.specialties << gardening
+contractor7.specialties << plumbing
+contractor8.specialties << carpentry
+contractor9.specialties << electrician
+contractor10.specialties << plumbing
 
 
 task1 = Task.create(name: 'Fix My floor', description: "Please come fix my floor!", user: chine, specialty: carpentry)
@@ -61,22 +75,42 @@ bid2 = Bid.create(price: 15, task: task1, contractor: contractor2)
 bid3 = Bid.create(price: 20, task: task2, contractor: contractor3)
 bid4 = Bid.create(price: 25, task: task2, contractor: contractor4)
 bid5 = Bid.create(price: 30, task: task3, contractor: contractor5)
-bid6 = Bid.create(price: 10, task: task3, contractor: contractor1)
-bid7 = Bid.create(price: 15, task: task4, contractor: contractor2)
-bid8 = Bid.create(price: 20, task: task4, contractor: contractor3)
-bid9 = Bid.create(price: 25, task: task5, contractor: contractor4)
-bid10 = Bid.create(price: 30, task: task5, contractor: contractor5)
+bid6 = Bid.create(price: 10, task: task3, contractor: contractor6)
+bid7 = Bid.create(price: 15, task: task4, contractor: contractor7)
+bid8 = Bid.create(price: 20, task: task4, contractor: contractor8)
+bid9 = Bid.create(price: 25, task: task5, contractor: contractor9)
+bid10 = Bid.create(price: 30, task: task5, contractor: contractor10)
 
 bid11 = Bid.create(price: 10, task: task6, contractor: contractor1)
 bid12 = Bid.create(price: 15, task: task6, contractor: contractor2)
 bid13 = Bid.create(price: 20, task: task7, contractor: contractor3)
 bid14 = Bid.create(price: 25, task: task7, contractor: contractor4)
 bid15 = Bid.create(price: 30, task: task8, contractor: contractor5)
-bid16 = Bid.create(price: 10, task: task8, contractor: contractor1)
-bid17 = Bid.create(price: 15, task: task9, contractor: contractor2)
-bid18 = Bid.create(price: 20, task: task9, contractor: contractor3)
-bid19 = Bid.create(price: 25, task: task10, contractor: contractor4)
-bid20 = Bid.create(price: 30, task: task10, contractor: contractor5)
+bid16 = Bid.create(price: 10, task: task8, contractor: contractor6)
+bid17 = Bid.create(price: 15, task: task9, contractor: contractor7)
+bid18 = Bid.create(price: 20, task: task9, contractor: contractor8)
+bid19 = Bid.create(price: 25, task: task10, contractor: contractor9)
+bid20 = Bid.create(price: 30, task: task10, contractor: contractor10)
+bid21 = Bid.create(price: 10, task: task6, contractor: contractor1)
+bid22 = Bid.create(price: 15, task: task6, contractor: contractor2)
+bid23 = Bid.create(price: 20, task: task7, contractor: contractor3)
+bid24 = Bid.create(price: 25, task: task7, contractor: contractor4)
+bid25 = Bid.create(price: 30, task: task8, contractor: contractor5)
+bid26 = Bid.create(price: 10, task: task8, contractor: contractor6)
+bid27 = Bid.create(price: 15, task: task9, contractor: contractor7)
+bid28 = Bid.create(price: 20, task: task9, contractor: contractor8)
+bid29 = Bid.create(price: 25, task: task10, contractor: contractor9)
+bid30 = Bid.create(price: 30, task: task10, contractor: contractor10)
+bid31 = Bid.create(price: 10, task: task1, contractor: contractor1)
+bid32 = Bid.create(price: 15, task: task1, contractor: contractor2)
+bid33 = Bid.create(price: 20, task: task2, contractor: contractor3)
+bid34 = Bid.create(price: 25, task: task2, contractor: contractor4)
+bid35 = Bid.create(price: 30, task: task3, contractor: contractor5)
+bid36 = Bid.create(price: 10, task: task3, contractor: contractor6)
+bid37 = Bid.create(price: 15, task: task4, contractor: contractor7)
+bid38 = Bid.create(price: 20, task: task4, contractor: contractor8)
+bid39 = Bid.create(price: 25, task: task5, contractor: contractor9)
+bid40 = Bid.create(price: 30, task: task5, contractor: contractor10)
 
 
 review1 = Review.create!(stars: 5, content: "This is a review for 1contractor", user: trevahr, contractor: contractor1)
