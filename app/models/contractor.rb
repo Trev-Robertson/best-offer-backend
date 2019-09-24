@@ -5,4 +5,12 @@ class Contractor < ApplicationRecord
     has_many :tasks, through: :bids
     has_many :reviews, dependent: :destroy
     has_many :users, through: :reviews
+
+
+
+
+    
+
+
+
 end
