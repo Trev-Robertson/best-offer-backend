@@ -52,7 +52,7 @@ class User < ApplicationRecord
                                 },
                                 :bids => 
                                 {
-                                :only => [:name, :price, :status, :contractor_id],
+                                :only => [:id, :name, :price, :status, :contractor_id],
                                     :include => {
                                         :contractor => {
                                             :only => [:name, :id]
