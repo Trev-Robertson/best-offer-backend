@@ -12,11 +12,12 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        contractor = Contractor.find(params[:contractor_id])
+        # contractor = Contractor.find(params[:contractor_id])
+        contractors = Contractor.all
           
         Review.create(review_params) 
         
-        render json: contractor.contractor_serializer
+        render json: contractors.all_contractors_serializer
     end
 
 

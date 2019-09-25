@@ -9,7 +9,7 @@ class Contractor < ApplicationRecord
 
 
 
-    def self.all_users_serializer
+    def self.all_contractors_serializer
         Contractor.all.to_json( {
                 :only => [:id, :name ],
                      :include => {
