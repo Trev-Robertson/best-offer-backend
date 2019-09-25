@@ -3,7 +3,13 @@ class Api::V1::AuthController < ApplicationController
     
     
     def create
-        @user = User.find_by({name: params[:name]})
+       
+        if params[:new_user] == true
+            @user = User.create(name: params[:name], password: params[:password])
+        else
+            @user = User.find_by({name: params[:name]})
+        end
+        
         if @user && @user.authenticate(params[:password])
             token = encode({user_id: @user.id})
          
