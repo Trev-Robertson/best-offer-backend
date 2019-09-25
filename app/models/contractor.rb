@@ -9,8 +9,67 @@ class Contractor < ApplicationRecord
 
 
 
-    
+    def self.all_users_serializer
+        Contractor.all.to_json( {
+                :only => [:id, :name ],
+                     :include => {
+                        :reviews => 
+                        {
+                            :only => [:id, :user_id, :content, :stars, :created_at], 
+                                :include => {:user => 
+                                    {
+                                         :only => [:name, :id]
+                                    }
+        
+                                }
+                        },
+                        :bids => 
+                        {
+                            :only => [:id],
+                        },
+                        :specialties => 
+                        {
+                            :only => [:id, :name],
+                        }
+                            
+                    }
+           
+                    
+        })
 
+    end
+
+
+
+    def contractor_serializer
+       self.to_json( {
+                :only => [:id, :name ],
+                     :include => {
+                        :reviews => 
+                        {
+                            :only => [:id, :user_id, :content, :stars, :created_at], 
+                                :include => {:user => 
+                                    {
+                                         :only => [:name, :id]
+                                    }
+        
+                                }
+                        },
+                        :bids => 
+                        {
+                            :only => [:id],
+                        },
+                        :specialties => 
+                        {
+                            :only => [:id, :name],
+                        }
+                            
+                    }
+           
+                    
+        })
+
+    end
 
 
 end

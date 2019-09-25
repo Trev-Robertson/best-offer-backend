@@ -3,7 +3,7 @@ class ContractorsController < ApplicationController
 
     def index
         contractors = Contractor.all
-        render json: contractors
+        render json: contractors.all_users_serializer
     end
 
     def show

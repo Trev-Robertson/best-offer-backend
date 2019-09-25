@@ -6,6 +6,7 @@ class Api::V1::AuthController < ApplicationController
        
         if params[:new_user] == true
             @user = User.create(name: params[:name], password: params[:password])
+            
         else
             @user = User.find_by({name: params[:name]})
         end

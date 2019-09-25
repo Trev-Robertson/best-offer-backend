@@ -11,4 +11,21 @@ class ReviewsController < ApplicationController
         render json: review
     end
 
+    def create
+        contractor = Contractor.find(params[:contractor_id])
+          
+        Review.create(review_params) 
+        
+        render json: contractor.contractor_serializer
+    end
+
+
+    private
+
+        def review_params
+            params.require(:review).permit(:user_id, :stars, :contractor_id, :content)
+        end
+
+
+
 end
