@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
         def self.all_users_serializer
             User.all.to_json( {
-                    :only => [:id, :name ],
+                    :only => [:id, :name, :img_url ],
                     :include => {:tasks => 
                         {
                             :only => [:id, :name, :description, :specialty_id], 
@@ -23,7 +23,7 @@ class User < ApplicationRecord
                                 :only => [:id, :name, :price, :status, :contractor_id],
                                     :include => {
                                         :contractor => {
-                                            :only => [:name, :id]
+                                            :only => [:name, :id, :img_url]
                                         }
                                     }
         
@@ -42,7 +42,7 @@ class User < ApplicationRecord
 
         def user_serializer
                 self.to_json( {
-                    :only => [:id, :name],
+                    :only => [:id, :name, :img_url],
                     :include => {:tasks => 
                         {
                             :only => [:id, :name, :description, :specialty_id], 
@@ -55,7 +55,7 @@ class User < ApplicationRecord
                                 :only => [:id, :name, :price, :status, :contractor_id],
                                     :include => {
                                         :contractor => {
-                                            :only => [:name, :id]
+                                            :only => [:name, :id, :img_url]
                                         }
                                     }
         

@@ -11,28 +11,29 @@ Specialty.destroy_all
 Task.destroy_all
 Bid.destroy_all
 
-trevahr = User.create(name: "Trevahr", password: "123")
-renee = User.create(name: "Renee", password: "r")
-sam = User.create(name: "Sam", password: "s")
-luke = User.create(name: "Luke", password: "l")
-chine = User.create(name: "Chine", password: "c")
+trevahr = User.create(name: "Trevahr", password: "123", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+renee = User.create(name: "Renee", password: "r", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+sam = User.create(name: "Sam", password: "s", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+luke = User.create(name: "Luke", password: "l", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+chine = User.create(name: "Chine", password: "c", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+trevor = User.create(name: "Trevor", password: "t", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
 
 
 
-contractor1 = Contractor.create(name: "Contractor1")
-contractor2 = Contractor.create(name: "Contractor2")
-contractor3 = Contractor.create(name: "Contractor3")
-contractor4 = Contractor.create(name: "Contractor4")
-contractor5 = Contractor.create(name: "Contractor5")
-contractor6 = Contractor.create(name: "Contractor6")
-contractor7 = Contractor.create(name: "Contractor7")
-contractor8 = Contractor.create(name: "Contractor8")
-contractor9 = Contractor.create(name: "Contractor9")
-contractor10 = Contractor.create(name: "Contractor10")
+contractor1 = Contractor.create(name: "Contractor1", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor2 = Contractor.create(name: "Contractor2", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor3 = Contractor.create(name: "Contractor3", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor4 = Contractor.create(name: "Contractor4", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor5 = Contractor.create(name: "Contractor5", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor6 = Contractor.create(name: "Contractor6", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor7 = Contractor.create(name: "Contractor7", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor8 = Contractor.create(name: "Contractor8", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor9 = Contractor.create(name: "Contractor9", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+contractor10 = Contractor.create(name: "Contractor10", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
 
 
 gardening = Specialty.create(name: "gardening")
-carpentry = Specialty.create(name: "capentry")
+carpentry = Specialty.create(name: "carpentry")
 plumbing = Specialty.create(name: "plumbing")
 technology = Specialty.create(name: "technology")
 electrician = Specialty.create(name: "electrician")

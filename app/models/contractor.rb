@@ -11,14 +11,14 @@ class Contractor < ApplicationRecord
 
     def self.all_contractors_serializer
         Contractor.all.to_json( {
-                :only => [:id, :name ],
+                :only => [:id, :name, :img_url],
                      :include => {
                         :reviews => 
                         {
                             :only => [:id, :user_id, :content, :stars, :created_at], 
                                 :include => {:user => 
                                     {
-                                         :only => [:name, :id]
+                                         :only => [:name, :id, :img_url]
                                     }
         
                                 }
@@ -48,14 +48,14 @@ class Contractor < ApplicationRecord
 
     def contractor_serializer
        self.to_json( {
-                :only => [:id, :name ],
+                :only => [:id, :name, :img_url ],
                      :include => {
                         :reviews => 
                         {
                             :only => [:id, :user_id, :content, :stars, :created_at], 
                                 :include => {:user => 
                                     {
-                                         :only => [:name, :id]
+                                         :only => [:name, :id, :img_url]
                                     }
         
                                 }
