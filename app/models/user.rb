@@ -13,7 +13,7 @@ class User < ApplicationRecord
                     :only => [:id, :name, :img_url ],
                     :include => {:tasks => 
                         {
-                            :only => [:id, :name, :description, :specialty_id], 
+                            :only => [:id, :name, :description, :specialty_id, :task_done], 
                                 :include => {:specialty => 
                                 {
                                 :only => [:name, :id]
@@ -45,7 +45,7 @@ class User < ApplicationRecord
                     :only => [:id, :name, :img_url],
                     :include => {:tasks => 
                         {
-                            :only => [:id, :name, :description, :specialty_id], 
+                            :only => [:id, :name, :description, :specialty_id, :task_done], 
                                 :include => {:specialty => 
                                 {
                                 :only => [:name, :id]

@@ -12,7 +12,7 @@ class BidsController < ApplicationController
     end
 
     def update
-        
+       
         bid = Bid.find(params[:id])
         bid.update(bid_params)
         render json: User.find(params[:user_id]).user_serializer

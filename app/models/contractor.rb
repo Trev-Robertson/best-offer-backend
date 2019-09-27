@@ -28,7 +28,7 @@ class Contractor < ApplicationRecord
                             :only => [:id],
                                 :include => {:task =>
                                     {
-                                    :only => [:name, :user_id]
+                                    :only => [:name, :user_id, :task_done]
                                      }
                                     }
                         },
@@ -63,6 +63,11 @@ class Contractor < ApplicationRecord
                         :bids => 
                         {
                             :only => [:id],
+                             :include => {:task =>
+                                    {
+                                    :only => [:name, :user_id, :task_done]
+                                     }
+                                    }
                         },
                         :specialties => 
                         {
