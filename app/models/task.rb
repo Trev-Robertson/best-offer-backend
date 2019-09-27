@@ -4,4 +4,6 @@ class Task < ApplicationRecord
   has_many :bids, dependent: :destroy
   validates :name, presence: true
   validates :description, presence: true
+  accepts_nested_attributes_for :bids
+
 end
