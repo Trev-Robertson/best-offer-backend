@@ -114,16 +114,16 @@ bid39 = Bid.create(price: 25, task: task5, contractor: contractor7)
 bid40 = Bid.create(price: 30, task: task5, contractor: contractor6)
 
 
-review1 = Review.create!(stars: 5, content: "This is a review for 1contractor", user: trevahr, contractor: contractor1)
-review2 = Review.create!(stars: 4, content: "This is a review for 2contractor", user: renee, contractor: contractor2)
-review3 = Review.create!(stars: 4, content: "This is a review for 3contractor", user: sam, contractor: contractor3)
-review4 = Review.create!(stars: 1, content: "This is a review for 4contractor", user: luke, contractor: contractor4)
-review5 = Review.create!(stars: 3, content: "This is a review for 5contractor", user: chine, contractor: contractor5)
-review6 = Review.create!(stars: 5, content: "This is a review for 6contractor", user: trevahr, contractor: contractor6)
-review7 = Review.create!(stars: 4, content: "This is a review for 7contractor", user: renee, contractor: contractor7)
-review8 = Review.create!(stars: 4, content: "This is a review for 8contractor", user: sam, contractor: contractor8)
-review9 = Review.create!(stars: 1, content: "This is a review for 9contractor", user: luke, contractor: contractor9)
-review10 = Review.create!(stars: 3, content: "This is a review for 10contractor", user: chine, contractor: contractor10)
+# review1 = Review.create!(stars: 5, content: "This is a review for 1contractor", user: trevahr, contractor: contractor1)
+# review2 = Review.create!(stars: 4, content: "This is a review for 2contractor", user: renee, contractor: contractor2)
+# review3 = Review.create!(stars: 4, content: "This is a review for 3contractor", user: sam, contractor: contractor3)
+# review4 = Review.create!(stars: 1, content: "This is a review for 4contractor", user: luke, contractor: contractor4)
+# review5 = Review.create!(stars: 3, content: "This is a review for 5contractor", user: chine, contractor: contractor5)
+# review6 = Review.create!(stars: 5, content: "This is a review for 6contractor", user: trevahr, contractor: contractor6)
+# review7 = Review.create!(stars: 4, content: "This is a review for 7contractor", user: renee, contractor: contractor7)
+# review8 = Review.create!(stars: 4, content: "This is a review for 8contractor", user: sam, contractor: contractor8)
+# review9 = Review.create!(stars: 1, content: "This is a review for 9contractor", user: luke, contractor: contractor9)
+# review10 = Review.create!(stars: 3, content: "This is a review for 10contractor", user: chine, contractor: contractor10)
 
 
 
