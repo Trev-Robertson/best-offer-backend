@@ -5,9 +5,10 @@ class Api::V1::ContractorsController < ApplicationController
 
 
     def show
+   
         token = request.headers["authentication"].split(" ")[1]
         @contractor = Contractor.find(decode_contractor(token)['user_id'])
-        render json:@.contractor_serializer, status: :accepted
+        render json: @contractor.contractor_serializer, status: :accepted
     end
 
 

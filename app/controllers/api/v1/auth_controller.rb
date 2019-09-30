@@ -25,7 +25,7 @@ class Api::V1::AuthController < ApplicationController
    end
 
    def create_contractor
-  
+       
     if params[:new_user] == true
         @contractor = Contractor.create(name: params[:name], password: params[:password])
         
