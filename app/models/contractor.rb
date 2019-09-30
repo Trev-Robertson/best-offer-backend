@@ -26,10 +26,10 @@ class Contractor < ApplicationRecord
                         },
                         :bids => 
                         {
-                            :only => [:id],
+                            :only => [:id, :status, :price],
                                 :include => {:task =>
                                     {
-                                    :only => [:name, :user_id, :task_done]
+                                    :only => [:name, :user_id, :task_done, :id]
                                      }
                                     }
                         },
@@ -63,10 +63,10 @@ class Contractor < ApplicationRecord
                         },
                         :bids => 
                         {
-                            :only => [:id],
+                            :only => [:id, :status, :price],
                              :include => {:task =>
                                     {
-                                    :only => [:name, :user_id, :task_done]
+                                    :only => [:name, :user_id, :task_done, :id]
                                      }
                                     }
                         },
