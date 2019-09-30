@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create]
+      resources :contractors, only: [:create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#show'
+      post '/login/contractor', to: 'auth#create_contractor'
+      get '/contractor', to: 'contractors#show'
     end
   end
   # resources :users
