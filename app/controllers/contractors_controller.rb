@@ -8,7 +8,7 @@ class ContractorsController < ApplicationController
 
     def show
         contractor = Contractor.find(params[:id])
-        render json: contractor
+        render json: contractor.contractor_serializer
     end
 
 
