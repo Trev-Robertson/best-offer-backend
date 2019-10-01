@@ -6,4 +6,49 @@ class Task < ApplicationRecord
   validates :description, presence: true
   accepts_nested_attributes_for :bids
 
+
+
+  def self.all_tasks_serializer
+    Task.all.to_json( {
+            :only => [:id, :name, :user_id, :specialty, :task_done, :description  ],
+            :include => {
+                :user => 
+                {
+                    :only => [:id, :name]
+
+                }, 
+                :bids =>
+                {
+                  :only => [:id, :price, :status]
+                }
+            }
+        })
+
+  end
+
+
+
+def task_serializer
+        self.to_json( {
+          :only => [:id, :name, :user_id, :specialty, :task_done, :description ],
+          :include => {
+              :user => 
+              {
+                  :only => [:id, :name]
+
+              }, 
+              :bids =>
+              {
+                :only => [:id, :price, :status]
+              }
+          }
+      })
+end
+
+
+
+
+
+
+
 end

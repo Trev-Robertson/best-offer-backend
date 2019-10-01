@@ -4,12 +4,12 @@ class TasksController < ApplicationController
 
     def index
         tasks = Task.all
-        render json: tasks
+        render json: tasks.all_tasks_serializer
     end
 
     def show
         task = Task.find(params[:id])
-        render json: task
+        render json: task.task_serializer
     end
     def create
       
