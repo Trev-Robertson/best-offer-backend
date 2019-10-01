@@ -19,7 +19,7 @@ class Task < ApplicationRecord
                 }, 
                 :bids =>
                 {
-                  :only => [:id, :price, :status]
+                  :only => [:id, :price, :status, :contractor_id]
                 }
             }
         })
@@ -39,7 +39,7 @@ def task_serializer
               }, 
               :bids =>
               {
-                :only => [:id, :price, :status]
+                :only => [:id, :price, :status, :contractor_id]
               }
           }
       })
