@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :reviews
+  delete '/contractor/bids/:id', to: 'bids#delete_contracor_bid'
   resources :bids
   resources :contractors
   resources :tasks

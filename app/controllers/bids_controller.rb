@@ -33,6 +33,13 @@ class BidsController < ApplicationController
         render json: User.find(params[:user_id]).user_serializer
     end
 
+    def delete_contracor_bid
+           bid = Bid.find(bid_params[:id])
+            bid.destroy
+       
+            render json: Contractor.find(bid_params[:contractor_id]).contractor_serializer
+    end
+
 
     private
         def bid_params
