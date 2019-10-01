@@ -27,11 +27,19 @@ class Contractor < ApplicationRecord
                         :bids => 
                         {
                             :only => [:id, :status, :price],
-                                :include => {:task =>
+                                :include => {
+                                    :task =>
                                     {
-                                    :only => [:name, :user_id, :task_done, :id]
-                                     }
+                                    :only => [:name, :user_id, :task_done, :id],
+                                    :include => {
+                                        :bids =>
+                                        {
+                                        :only => [:id, :status, :price, :status]
+                                            
+                                        }
                                     }
+                                    }
+                                }
                         },
                         :specialties => 
                         {
@@ -64,11 +72,19 @@ class Contractor < ApplicationRecord
                         :bids => 
                         {
                             :only => [:id, :status, :price],
-                             :include => {:task =>
+                                :include => {
+                                    :task =>
                                     {
-                                    :only => [:name, :user_id, :task_done, :id]
-                                     }
+                                    :only => [:name, :user_id, :task_done, :id],
+                                    :include => {
+                                        :bids =>
+                                        {
+                                        :only => [:id, :status, :price, :status]
+                                            
+                                        }
                                     }
+                                    }
+                                }
                         },
                         :specialties => 
                         {
