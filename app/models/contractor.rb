@@ -26,7 +26,7 @@ class Contractor < ApplicationRecord
                         },
                         :bids => 
                         {
-                            :only => [:id, :status, :price],
+                            :only => [:id, :status, :price, :contractor_id],
                                 :include => {
                                     :task =>
                                     {
@@ -34,7 +34,7 @@ class Contractor < ApplicationRecord
                                     :include => {
                                         :bids =>
                                         {
-                                        :only => [:id, :status, :price, :status]
+                                        :only => [:id, :status, :price, :contractor_id]
                                             
                                         }
                                     }
@@ -71,7 +71,7 @@ class Contractor < ApplicationRecord
                         },
                         :bids => 
                         {
-                            :only => [:id, :status, :price],
+                            :only => [:id, :status, :price, :contractor_id],
                                 :include => {
                                     :task =>
                                     {
@@ -79,7 +79,7 @@ class Contractor < ApplicationRecord
                                     :include => {
                                         :bids =>
                                         {
-                                        :only => [:id, :status, :price, :status]
+                                        :only => [:id, :status, :price, :contractor_id]
                                             
                                         }
                                     }

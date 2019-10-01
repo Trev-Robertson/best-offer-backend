@@ -15,8 +15,6 @@ class BidsController < ApplicationController
        
         contractor = Contractor.find(bid_params[:contractor_id])
           bid =  Bid.create(bid_params) 
-        
-        byebug
         render json: contractor.contractor_serializer
     end
     
@@ -26,7 +24,7 @@ class BidsController < ApplicationController
         bid = Bid.find(params[:id])
         bid.update(bid_params)
     
-        render json: Contractor.find(bid_params[:contractor_id]).user_serializer
+        render json: Contractor.find(bid_params[:contractor_id]).contractor_serializer
     end
 
 
