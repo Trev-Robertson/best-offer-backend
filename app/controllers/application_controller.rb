@@ -30,5 +30,35 @@ class ApplicationController < ActionController::API
         JWT.decode(token, secret_key_contractor, true, {algorithm: 'HS512'})[0]
     end
 
-
+        def reply
+        byebug
+        message_body = params["Body"]
+        from_number = params["From"]
+        
+        boot_twilio
+     
+        sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "You Just Got A New Bid On A Task" )
+        render json: User.find(1)
+       end
+    
+    
+       def create_message
+        byebug
+        to_number = ''
+        @client.messages.create(
+          from: Rails.application.credentials.twilio_number,
+          to: to_number,
+          body: "Encrypted Key"
+          )
+       end
+     
+       private
+     
+       def boot_twilio
+         account_sid = Rails.application.credentials.twilio_sid
+         auth_token = Rails.application.credentials.twilio_token
+         @client = Twilio::REST::Client.new account_sid, auth_token
+        
+      
+        end
 end

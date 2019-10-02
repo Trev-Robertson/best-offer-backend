@@ -12,9 +12,12 @@ class BidsController < ApplicationController
     end
 
     def create
-       
+        boot_twilio
+        @client.messages.create(from: Rails.application.credentials.twilio_number, to: '+13012567282', body: "You Just Got A New Bid On A Task" )
+      
         contractor = Contractor.find(bid_params[:contractor_id])
           bid =  Bid.create(bid_params) 
+          
         render json: contractor.contractor_serializer
     end
     
@@ -45,5 +48,6 @@ class BidsController < ApplicationController
         def bid_params
             params.require(:bid).permit(:id, :task_id, :contractor_id, :price, :status)
         end
+
 
 end
