@@ -12,11 +12,14 @@ class BidsController < ApplicationController
     end
 
     def create
+  
         boot_twilio
-        @client.messages.create(from: Rails.application.credentials.twilio_number, to: '+13012567282', body: "You Just Got A New Bid On A Task" )
-      
         contractor = Contractor.find(bid_params[:contractor_id])
+        task = Task.find(bid_params[:task_id])
           bid =  Bid.create(bid_params) 
+        @client.messages.create(from: Rails.application.credentials.twilio_number, to: '+13012567282', 
+        body: "You Just Got A New Bid On Task '#{task.name}' for $#{bid.price}" )
+      
           
         render json: contractor.contractor_serializer
     end
@@ -24,8 +27,14 @@ class BidsController < ApplicationController
 
 
     def update
+        
         bid = Bid.find(params[:id])
         bid.update(bid_params)
+        task = Task.find(bid_params[:task_id])
+        boot_twilio
+        @client.messages.create(from: Rails.application.credentials.twilio_number, to: '+13012567282', 
+        body: "You Just Got A New Bid On Task '#{task.name}'  for $#{bid.price}" )
+      
     
         render json: Contractor.find(bid_params[:contractor_id]).contractor_serializer
     end
