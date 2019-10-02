@@ -23,7 +23,7 @@ class TasksController < ApplicationController
         boot_twilio
         bid = Bid.find(task_params[:bids_attributes]['id'])
         bid.update(task_params[:bids_attributes])
-        byebug
+       
         task = Task.find(task_params[:id])
         task.update(task_params)
         contractor = Contractor.find(bid.contractor_id)
