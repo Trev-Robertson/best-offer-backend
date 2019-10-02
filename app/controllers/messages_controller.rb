@@ -3,15 +3,28 @@ class MessagesController < ApplicationController
   #skip_before_filter :authenticate_user!, :only => "reply"
  
    def reply
-  
+      
     message_body = params["Body"]
     from_number = params["From"]
+    contractor = Contractor.find_by(phone_number: params["From"] )
     boot_twilio
-    params["Body"].split(',')
-    byebug
- 
-    # sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Thanks for your Bid of $#{message_body}. It was Successful" )
+    if message_body.strip.downcase === 'tasks'
+       
+      @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: 
+      "Please use these codes when bidding on a task: #{contractor.tasks.map {|task| "Code: #{task.id} for Task: #{task.name}" } }" )
+
+    else
     
+      results = Message.return_task_and_bid_amount(message_body, contractor)
+    
+        if results
+          sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Thanks for your Bid of $#{results[1].price} for Task '#{results[0].name}'. It was Successful" )
+        else
+          sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Unsuccessdul Bid Attempt. Please Try Again" )
+
+        end
+
+    end
    end
 
 
