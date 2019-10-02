@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/reply'
   resources :reviews
   delete '/contractor/bids/:id', to: 'bids#delete_contracor_bid'
   resources :bids
@@ -13,6 +14,11 @@ Rails.application.routes.draw do
       get '/contractor', to: 'contractors#show'
       post '/login/contractor', to: 'auth#create_contractor'
       post '/login', to: 'auth#create'
+    end
+  end
+  resource :messages do
+    collection do
+      post 'reply'
     end
   end
   # resources :users

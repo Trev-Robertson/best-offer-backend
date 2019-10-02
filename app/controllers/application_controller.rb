@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::API
 
 
+
+
+
     def secret_key_user
         Rails.application.credentials.dig(:secret_auth_key_for_users)
     end
