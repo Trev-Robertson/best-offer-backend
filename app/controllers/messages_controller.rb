@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
     if message_body.strip.downcase === 'tasks'
        
       @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: 
-      "Please use these codes when bidding on a task: #{contractor.tasks.map {|task| "Code: #{task.id} for Task: #{task.name}" } }" )
+      "Please use these codes when bidding on a task: \n \n #{contractor.tasks.map {|task| "Code: #{task.id}, for Task Name: #{task.name}" }.join(", \n \n ") }  " )
 
     else
     
