@@ -6,7 +6,10 @@ class MessagesController < ApplicationController
       
     message_body = params["Body"]
     from_number = params["From"]
-    contractor = Contractor.find_by(phone_number: params["From"] )
+        
+    from_number.blank? ?  from_number = Rails.application.credentials.my_number : from_number
+    
+    contractor = Contractor.find_by(phone_number: from_number)
     boot_twilio
     if message_body.strip.downcase === 'tasks'
        
@@ -18,7 +21,12 @@ class MessagesController < ApplicationController
       results = Message.return_task_and_bid_amount(message_body, contractor)
     
         if results
-          sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Thanks for your Bid of $#{results[1].price} for Task '#{results[0].name}'. It was Successful" )
+          @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Thanks for your Bid of $#{results[1].price} for Task '#{results[0].name}'. \n It was Successful" )
+          
+          from_number = results[2].phone_number
+          from_number.blank? ?  from_number = Rails.application.credentials.my_number : from_number
+          @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "You Just Got A New Bid On Task #{results[0].name} for $#{results[1].price}" )
+
         else
           sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Unsuccessdul Bid Attempt. Please Try Again" )
 

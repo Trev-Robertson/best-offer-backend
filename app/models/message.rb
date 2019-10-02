@@ -12,9 +12,11 @@ class Message < ApplicationRecord
             if (Task.find(task_id) && bid_amount > 0)
               
               task = Task.find(task_id)
+              user = User.find(task.user_id)
+           
               bid = task.bids.find {|b| b.contractor_id == contractor.id }
               bid.update(price: bid_amount)
-              return [task, bid]
+              return [task, bid, user]
             end
           return false
     end

@@ -20,11 +20,17 @@ class TasksController < ApplicationController
     end
 
     def update
-        
+        boot_twilio
         bid = Bid.find(task_params[:bids_attributes]['id'])
         bid.update(task_params[:bids_attributes])
+        byebug
         task = Task.find(task_params[:id])
         task.update(task_params)
+        contractor = Contractor.find(bid.contractor_id)
+        from_number = contractor.phone_number
+        from_number.blank? ?  from_number = Rails.application.credentials.my_number : from_number
+        @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, 
+        body: "Congrats! Your Bid of $#{bid.price} for Task '#{task.name}' Was Accepted!" )
        
           render json: User.find(task_params[:user_id]).user_serializer
       end
