@@ -11,12 +11,12 @@ Specialty.destroy_all
 Task.destroy_all
 Bid.destroy_all
 
-trevahr = User.create(name: "Trevahr", password: "123", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
-renee = User.create(name: "Renee", password: "r", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
-sam = User.create(name: "Sam", password: "s", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
-luke = User.create(name: "Luke", password: "l", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
-chine = User.create(name: "Chine", password: "c", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
-trevor = User.create(name: "Trevor", password: "t", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+trevahr = User.create(name: "Trevahr", phone_number: '+13012567282', password: "123", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+renee = User.create(name: "Renee", phone_number: '+13012567282', password: "r", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+sam = User.create(name: "Sam", phone_number: '+13012567282', password: "s", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+luke = User.create(name: "Luke", phone_number: '+13012567282', password: "l", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+chine = User.create(name: "Chine", phone_number: '+13012567282', password: "c", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
+trevor = User.create(name: "Trevor", phone_number: '+13012567282', password: "t", img_url: "https://randomuser.me/api/portraits/#{["women", "men"].sample}/#{rand(1..99)}.jpg")
 
 
 
