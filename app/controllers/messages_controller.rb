@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
     if ['tasks', 'task', 't'].include?(message_body.strip.downcase)
 
       @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: 
-      "Please use these codes when bidding on a task, in the format of 'code, bid amount'. ex: (1, 200) : \n \n #{contractor.tasks.select {|task| !task.task_done }.map {|task| "Code: #{task.id}, for Task Name: #{task.name}" }.join(", \n \n ") }  " )
+      "Please use these codes when bidding on a task, in the format of 'code, bid amount'. ex: (1, 200) : \n \n #{contractor.bids.select {|bid| !bid.task.task_done }.map {|bid| "Code: #{bid.task.id} \n For Task Name: #{bid.task.name}. \n Your Current Bid is $#{bid.price} " }.join(", \n \n ") }  " )
 
     else
     
@@ -25,7 +25,7 @@ class MessagesController < ApplicationController
           
           from_number = results[2].phone_number
           from_number.blank? ?  from_number = Rails.application.credentials.my_number : from_number
-          @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "You Just Got A New Bid On Task #{results[0].name} for $#{results[1].price}" )
+          @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "You Just Got A New Bid On Task '#{results[0].name}' for $#{results[1].price}" )
 
         else
           sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Unsuccessdul Bid Attempt. Please Try Again" )
