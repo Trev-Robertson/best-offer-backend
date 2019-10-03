@@ -17,9 +17,9 @@ class MessagesController < ApplicationController
       "Please use these codes when bidding on a task, in the format of 'code, bid amount'. ex: (1, 200) : \n \n #{contractor.bids.select {|bid| !bid.task.task_done }.map {|bid| "Code: #{bid.task.id} \n For Task Name: #{bid.task.name}. \n Your Current Bid is $#{bid.price} " }.join(", \n \n ") }  " )
 
     else
+
     
       results = Message.return_task_and_bid_amount(message_body, contractor)
-    
         if results
           @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Thanks for your Bid of $#{results[1].price} for Task '#{results[0].name}'. \n It was Successful" )
           
@@ -28,7 +28,8 @@ class MessagesController < ApplicationController
           @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "You Just Got A New Bid On Task '#{results[0].name}' for $#{results[1].price}" )
 
         else
-          sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Unsuccessdul Bid Attempt. Please Try Again" )
+
+          sms = @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: "Unsuccessful Request. Please Check Your Formatting And Try Again" )
 
         end
 
