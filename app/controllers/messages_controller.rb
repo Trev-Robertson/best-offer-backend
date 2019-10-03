@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
     
     contractor = Contractor.find_by(phone_number: from_number)
     boot_twilio
-    if message_body.strip.downcase === 'tasks'
+    if ['tasks', 'task', 't'].include?(message_body.strip.downcase)
 
       @client.messages.create(from: Rails.application.credentials.twilio_number, to: from_number, body: 
       "Please use these codes when bidding on a task, in the format of 'code, bid amount'. ex: (1, 200) : \n \n #{contractor.tasks.select {|task| !task.task_done }.map {|task| "Code: #{task.id}, for Task Name: #{task.name}" }.join(", \n \n ") }  " )
