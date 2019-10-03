@@ -12,7 +12,7 @@ class Message < ApplicationRecord
           bid_amount = arr[1].tr('^A-Za-z0-9', '').to_i
         
           if (!Task.find_by(id: task_id).blank? && bid_amount > 0)
-            bybug
+           
             task = Task.find(task_id)
               user = User.find(task.user_id)
            
