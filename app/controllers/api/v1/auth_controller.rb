@@ -5,7 +5,7 @@ class Api::V1::AuthController < ApplicationController
     def create
        
         if params[:new_user] == true
-            @user = User.create(name: params[:name], password: params[:password])
+            @user = User.create(name: params[:name], password: params[:password], phone_number: params[:phone_number])
             
         else
             @user = User.find_by({name: params[:name]})
@@ -27,7 +27,7 @@ class Api::V1::AuthController < ApplicationController
    def create_contractor
        
     if params[:new_user] == true
-        @contractor = Contractor.create(name: params[:name], password: params[:password])
+        @contractor = Contractor.create(name: params[:name], password: params[:password], phone_number: params[:phone_number] )
         
     else
         @contractor = Contractor.find_by({name: params[:name]})
